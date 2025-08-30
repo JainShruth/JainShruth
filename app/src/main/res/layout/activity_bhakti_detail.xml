@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1"
+    tools:context=".BhaktiDetailActivity">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:minHeight="72dp"
+        android:paddingTop="12dp"
+        android:background="#FF9933"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:navigationIcon="@drawable/ic_back"
+        app:title=""
+        app:titleCentered="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bhakti"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:fontFamily="@font/cinzel_regular"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="74dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:clipToPadding="false"
+        android:scrollbars="none"> <!-- ✅ Hides scrollbar -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title with share icon on right -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="ॐकारमयी वाणी तेरी"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF9933"
+                    android:fontFamily="@font/cinzel_regular"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:id="@+id/shareIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_invite"
+                    android:contentDescription="Share"
+                    android:tint="@null"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/titleTextView"
+                    app:layout_constraintBottom_toBottomOf="@id/titleTextView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Writer -->
+            <TextView
+                android:id="@+id/writerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="पं. अभय कुमार जी शास्त्री"
+                android:textSize="14sp"
+                android:textColor="#D84215"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="34dp"
+                android:textAlignment="center" />
+
+            <!-- Lyrics -->
+            <TextView
+                android:id="@+id/lyricsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="यहाँ भजन के बोल होंगे।"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="6dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:fontFamily="@font/cinzel_regular"
+                android:breakStrategy="simple"
+                android:hyphenationFrequency="none"
+                android:gravity="center"
+                android:textAlignment="gravity" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

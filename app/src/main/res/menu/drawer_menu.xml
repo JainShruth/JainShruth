@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+
+    <item
+        android:id="@+id/nav_kosh"
+        android:title="Jain Kosh"
+        android:icon="@drawable/ic_jainkosh" />
+
+    <item
+        android:id="@+id/nav_granths"
+        android:title="Granths"
+        android:icon="@drawable/ic_grant" />
+
+    <item
+        android:id="@+id/nav_bhakti"
+        android:title="Bhakti"
+        android:icon="@drawable/ic_bhakti" />
+
+    <item
+        android:id="@+id/nav_pujan"
+        android:title="Pujan and Path"
+        android:icon="@drawable/ic_pujan" />
+
+    <item
+        android:id="@+id/nav_invite"
+        android:title="Invite Friends"
+        android:icon="@drawable/ic_invite" />
+
+
+    <item
+        android:id="@+id/nav_about"
+        android:title="Contact US"
+        android:icon="@drawable/ic_info" />
+
+
+</menu>

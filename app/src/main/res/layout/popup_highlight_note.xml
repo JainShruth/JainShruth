@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/highlight_note_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/popup_background"
+    android:padding="12dp"
+    android:elevation="8dp"
+    android:visibility="gone"
+    android:layout_gravity="top|start"
+    android:layout_margin="16dp">
+
+    <!-- Highlight -->
+    <LinearLayout
+        android:id="@+id/btn_highlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_highlight_yellow"
+            android:contentDescription="Highlight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Highlight"
+            android:textSize="12sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <!-- Note -->
+    <LinearLayout
+        android:id="@+id/btn_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_note"
+            android:contentDescription="Note" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:textSize="12sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <!-- Dictionary -->
+    <LinearLayout
+        android:id="@+id/btn_dict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_dictionary"
+            android:contentDescription="Dictionary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dict"
+            android:textSize="12sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+</LinearLayout>

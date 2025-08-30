@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mainactivity">
+
+    <!-- Main content with cards -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="32dp"
+            android:paddingBottom="12dp"
+            android:background="#FF9933"
+            android:elevation="4dp"
+            app:navigationIcon="@drawable/ic_menu"
+            app:menu="@menu/top_app_bar_menu"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+            <TextView
+                android:id="@+id/customToolbarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jain Shruth"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:fontFamily="@font/cinzel_regular"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <!-- Scrollable card list -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF8E1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- Row 1: Jain Kosh + Granths -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <include
+                        layout="@layout/card_jainkosh"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <include
+                        layout="@layout/card_granths"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Row 2: Bhakti + Pujan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <include
+                        layout="@layout/card_bhakti"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <include
+                        layout="@layout/card_pujan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Row 3: Jain Kahaniya + Articles -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <include
+                        layout="@layout/card_jain_kahaniya"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <include
+                        layout="@layout/card_articles"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Watch Video (full width) -->
+                <include
+                    layout="@layout/card_watch_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- Drawer menu list with footer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/drawer_bg"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/drawer_header"
+        app:itemTextAppearance="@style/DrawerMenuTextStyle"
+        app:itemIconSize="48dp"
+        app:itemIconTint="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:paddingTop="32dp"
+            android:paddingBottom="24dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <ImageView
+                    android:id="@+id/instagram_icon_footer"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_instagram" />
+
+                <ImageView
+                    android:id="@+id/youtube_icon_footer"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_youtube" />
+
+                <ImageView
+                    android:id="@+id/facebook_icon_footer"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_facebook" />
+
+                <ImageView
+                    android:id="@+id/twitter_icon_footer"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_twitter" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Developed by: CA Akshay Jain"
+                android:textColor="#444"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="24dp"
+                android:paddingTop="4dp"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>
