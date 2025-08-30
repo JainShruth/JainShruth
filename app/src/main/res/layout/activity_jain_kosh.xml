@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kosh_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1"
+    tools:context=".JainKoshActivity">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:minHeight="72dp"
+        android:paddingTop="12dp"
+        android:background="#FF9933"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:navigationIcon="@drawable/ic_back"
+        app:title=""
+        app:titleCentered="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jain Kosh"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:fontFamily="@font/cinzel_regular"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:layout_marginTop="72dp">
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Search"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:background="@drawable/bg_search_bar"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Word of the Day Card -->
+        <LinearLayout
+            android:id="@+id/card_word_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_word_card"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginBottom="4dp"
+            android:elevation="2dp">
+
+            <!-- Top Row: Date + Title + Icons -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <!-- Date on Left -->
+                <TextView
+                    android:id="@+id/tv_word_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13 Jun 2025"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Word of the Day title Centered -->
+                <TextView
+                    android:id="@+id/word_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Word of the Day"
+                    android:fontFamily="@font/cinzel_bold"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Bookmark icon -->
+                <ImageView
+                    android:id="@+id/ic_bookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_bookmark"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Share icon to left of bookmark -->
+                <ImageView
+                    android:id="@+id/ic_share"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_invite"
+                    android:layout_toStartOf="@id/ic_bookmark"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="4dp" />
+            </RelativeLayout>
+
+            <!-- Hindi Word -->
+            <TextView
+                android:id="@+id/tv_word_of_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="क्षमापना"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Word Meaning -->
+            <TextView
+                android:id="@+id/tv_word_meaning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="क्षमायाचना करने की प्रक्रिया"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+        </LinearLayout>
+
+        <!-- Saved Words Card -->
+        <LinearLayout
+            android:id="@+id/saved_words_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_word_card"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔖 Saved Words"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Word List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/word_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="40dp" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

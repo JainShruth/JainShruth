@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1"
+    tools:context=".PujanDetailActivity">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:minHeight="72dp"
+        android:paddingTop="12dp"
+        android:background="#FF9933"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:navigationIcon="@drawable/ic_back"
+        app:title=""
+        app:titleCentered="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pujan and Path"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:fontFamily="@font/cinzel_regular"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="74dp">
+
+        <!-- Title Row (Properly Centered) -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp">
+
+            <!-- Centered Text Block -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/pujan_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pujan Name"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF9933"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/writer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Writer Name"
+                    android:textSize="15sp"
+                    android:textColor="#D84215"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+            <!-- Share Icon (Right Aligned on top) -->
+            <ImageView
+                android:id="@+id/share_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|center_vertical"
+                android:src="@drawable/ic_invite"
+                android:contentDescription="Share"
+                android:padding="8dp"/>
+        </FrameLayout>
+
+        <!-- Toggle Meaning -->
+        <Switch
+            android:id="@+id/toggle_meaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="अर्थ सहित दिखाएं"
+            android:textSize="16sp"
+            android:layout_gravity="end"
+            android:textColor="#444"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp" />
+
+        <!-- WebView for Pujan Content -->
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            android:background="#FFF8E1"
+            android:overScrollMode="never"
+            android:layout_marginBottom="25dp"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
