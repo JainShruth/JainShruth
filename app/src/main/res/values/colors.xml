@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="drawer_bg">#FFF8E1</color>
+    <color name="saffron">#D84215</color>"
+    <color name="saffron_chip">#FF9933</color>
+    <color name="chip_background">#FFE0B2</color> <!-- Light saffron/cream -->
+    <color name="chip_text">#A05200</color>
+    <color name="soft_cream">#FFF8E1</color><!-- Deep saffron or brown -->
+    <color name="orange">#FF9933</color>
+</resources>

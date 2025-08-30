@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_bookmark"
+        android:icon="@drawable/ic_bookmark"
+        android:title="Bookmark"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share"
+        android:showAsAction="ifRoom" />
+</menu>

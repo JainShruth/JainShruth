@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/saved_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:minHeight="72dp"
+        android:paddingTop="12dp"
+        android:background="#FF9933"
+        android:elevation="4dp"
+        android:title=""
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:navigationIcon="@drawable/ic_back"
+        android:titleTextColor="@android:color/white"
+        app:titleCentered="true">
+
+        <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saved Words"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:fontFamily="@font/cinzel_regular"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/saved_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="40dp" />
+</LinearLayout>

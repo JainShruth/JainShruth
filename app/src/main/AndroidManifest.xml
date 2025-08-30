@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Jain Shruth"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JainShruth"
+        tools:targetApi="31">
+        <activity
+            android:name=".GranthDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".GranthReaderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArticleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PujanDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KahaniDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BhaktiDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArticleActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".JainKahaniyaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PujanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContactusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvitefriendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BhaktiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GranthsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SavedWordsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WordDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JainKoshActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
